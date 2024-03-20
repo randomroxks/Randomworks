@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "Projects",
+  "display": "standalone",
+  "name": "Projects",
+  "short_name": "Projects",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}

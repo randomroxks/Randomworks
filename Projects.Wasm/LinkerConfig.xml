@@ -1,0 +1,11 @@
+<linker>
+  <assembly fullname="Projects" />
+  <assembly fullname="Projects.Wasm" />
+
+  <!--
+  Uncomment this section when using JSON.NET
+  <assembly fullname="System.Core">
+    <type fullname="System.Linq.Expressions*" />
+  </assembly>
+   -->
+</linker>
