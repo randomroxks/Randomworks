@@ -9,5 +9,6 @@
     <TextBlock AutomationProperties.AutomationId="HelloTextBlock"
           Text="Hello Uno Platform"
           HorizontalAlignment="Center" />
+    <ComboBox IsEditable="True" Width="200" PlaceholderText="Write something"/>
   </StackPanel>
 </Page>

@@ -7,5 +7,45 @@
 
   </ResourceDictionary.MergedDictionaries>
   <!-- Add resources here -->
+  <Style TargetType="ComboBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBox">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="PART_EditableTextBox"
+                                 IsEnabled="{TemplateBinding IsEnabled}"
+                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                 CaretBrush="{TemplateBinding Foreground}"
+                                 Text="{TemplateBinding Text}"
+                                 Background="{TemplateBinding Background}"
+                                 BorderThickness="{TemplateBinding BorderThickness}"
+                                 BorderBrush="{TemplateBinding BorderBrush}"
+                                 Padding="{TemplateBinding Padding}" />
+                        <Button x:Name="PART_ClearButton"
+                                Grid.Column="1"
+                                Style="{StaticResource ClearButtonStyle}"
+                                Visibility="Collapsed"
+                                Margin="0,0,6,0" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger TargetName="PART_EditableTextBox" Property="Text" Value="">
+                            <Setter TargetName="PART_ClearButton" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="PART_EditableTextBox" Property="Opacity" Value="0.5" />
+                        </Trigger>
+                        <Trigger Property="HasItems" Value="false">
+                            <Setter TargetName="PART_EditableTextBox" Property="Opacity" Value="0.5" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
 </ResourceDictionary>
