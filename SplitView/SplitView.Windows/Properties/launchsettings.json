@@ -1,0 +1,10 @@
+{
+	"profiles": {
+		"SplitView.Windows (Unpackaged)": {
+			"commandName": "Project"
+		},
+		"SplitView.Windows (Package)": {
+			"commandName": "MsixPackage"
+		}
+	}
+}
